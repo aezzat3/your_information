@@ -1,6 +1,10 @@
-import React from 'react';
-import {View} from 'react-native';
+// In App.js in a new project
 
-export default function App() {
-  return <View></View>;
+import * as React from 'react';
+import Navigation from './Navigation';
+
+function App() {
+  return <Navigation />;
 }
+
+export default App;
