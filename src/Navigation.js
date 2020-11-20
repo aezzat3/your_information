@@ -6,6 +6,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from './screens/Home';
 import TestScreen from './screens/Test';
+import {TEXTS} from './common';
 
 const Stack = createStackNavigator();
 const MainStack = createStackNavigator();
@@ -17,8 +18,16 @@ const MainNavigation = () => (
       headerTitleStyle: styles.headerTitleStyle,
       headerTintColor: '#FFF',
     }}>
-    <MainStack.Screen name="Home" component={HomeScreen} />
-    <MainStack.Screen name="Test" component={TestScreen} />
+    <MainStack.Screen
+      name="Home"
+      component={HomeScreen}
+      options={{title: TEXTS.thatek}}
+    />
+    <MainStack.Screen
+      name="Test"
+      component={TestScreen}
+      options={{title: TEXTS.test}}
+    />
   </MainStack.Navigator>
 );
 
