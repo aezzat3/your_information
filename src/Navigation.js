@@ -6,6 +6,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from './screens/Home';
 import TestScreen from './screens/Test';
+import Result from './screens/Result';
 import {TEXTS} from './common';
 
 const Stack = createStackNavigator();
@@ -34,6 +35,7 @@ const MainNavigation = () => (
 const RootNavigation = () => (
   <Stack.Navigator headerMode={'none'}>
     <Stack.Screen name="Main" component={MainNavigation} />
+    <Stack.Screen name="Result" component={Result} />
   </Stack.Navigator>
 );
 export default () => (

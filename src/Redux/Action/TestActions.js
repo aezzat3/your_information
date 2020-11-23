@@ -26,5 +26,10 @@ export const fetchTaskQuestions = () => {
 };
 
 export const onSelectAnswer = ({answer, index, isCorrect}) => {
-  return {type: SELECT_QUESTION_ANSWER, payload: {answer, index, isCorrect}};
+  return (dispatch) => {
+    dispatch({
+      type: SELECT_QUESTION_ANSWER,
+      payload: {answer, index, isCorrect},
+    });
+  };
 };
